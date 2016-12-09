@@ -145,7 +145,7 @@ public class TelomereCounter {
 			File file = new File(args[3]  + id);
 			try (Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"))) {
 				out.write(String.format("%20s%n %20s%n %20s%n %20s%n %20s%n %20s%n %20s%n %20s%n", "ID: " + id.replace(".txt", ""),
-					"NumberOfReads: " + numberOfReads, "ElapsedTime: " + hours + "hr" + minutes + "min" + seconds + "sec",
+					"LibrarySize: " + numberOfReads, "ElapsedTime: " + hours + "hr" + minutes + "min" + seconds + "sec",
 					"CytosineCount: " + cytosineCount, "GuanineCount: " + guanineCount, "Cytosine Probability: " + 
 					(float)((float)(cytosineCount / 70)/(numberOfReads)), "Guanine Probability: " + 
 					(float)((float)(guanineCount/70)/(numberOfReads)), "Telomeres with repeats >" + args[1] + ": " + totalTelomere));
