@@ -32,12 +32,12 @@ public class TelomereCounter {
 		String motif = args[0];
 		String oppositeMotif = findOpposite(motif);
 		
-		// Checks arguments
+		// Check for illegal arguments
 		if (!(new File(args[3]).isDirectory())) {
 			throw new IllegalArgumentException(args[3] + "is not a directory. Raw output directory is required.");
 		}
 		
-		// Reads data from each GZIP, counts telomeres, and prints results in the output file
+		// Read data from each GZIP, counts telomeres, and prints results in the output file
 		try (GZIPInputStream gzip = new GZIPInputStream(new FileInputStream(args[2]))) {
 			startTime = System.currentTimeMillis();
 			BufferedReader br = new BufferedReader(new InputStreamReader(gzip));
@@ -61,7 +61,7 @@ public class TelomereCounter {
 				String read = line.substring(firstSpace, lastSpace);
 				int mid = read.length() / 2;
 
-				// Counts telomeric sequences in each pair
+				// Count telomeric sequences in each pair
 				String[] pairs = { read.substring(0, mid), read.substring(mid, read.length()) };
 				int pair1TelomereCount = 0;
 				int pair2TelomereCount = 0;
