@@ -16,7 +16,7 @@ import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
 
-public class TelomereScanner {
+public class TelomereCounter {
 	/**
 	 * 
 	 * @author kendrahong
@@ -106,11 +106,11 @@ public class TelomereScanner {
 			// Timer
 			long stopTime = System.currentTimeMillis();
 			elapsedTime = stopTime - startTime;
-	        long hours = TimeUnit.MILLISECONDS.toHours(elapsedTime);
-	        elapsedTime -= TimeUnit.HOURS.toMillis(hours);
-	        long minutes = TimeUnit.MILLISECONDS.toMinutes(elapsedTime);
-	        elapsedTime -= TimeUnit.MINUTES.toMillis(minutes);
-	        long seconds = TimeUnit.MILLISECONDS.toSeconds(elapsedTime);
+	        	long hours = TimeUnit.MILLISECONDS.toHours(elapsedTime);
+	        	elapsedTime -= TimeUnit.HOURS.toMillis(hours);
+	        	long minutes = TimeUnit.MILLISECONDS.toMinutes(elapsedTime);
+	        	elapsedTime -= TimeUnit.MINUTES.toMillis(minutes);
+	        	long seconds = TimeUnit.MILLISECONDS.toSeconds(elapsedTime);
 
 			// Create new file in output folder and write results
 			int index = args[2].lastIndexOf("/");
