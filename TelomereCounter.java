@@ -16,7 +16,7 @@ import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
 
-public class TelomereScanner {
+public class TelomereCounter {
 	/**
 	 * 
 	 * @author kendrahong
