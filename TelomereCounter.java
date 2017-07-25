@@ -207,7 +207,7 @@ public class TelomereCounter {
 			} else if (motif.charAt(i) == 'G') {
 				output += "C";
 			} else {
-				throw new IllegalArgumentException("Invalid motif. Motifs can only contian ATCG"); 
+				throw new IllegalArgumentException("Invalid motif. Motifs can only contain ATCG"); 
 			}
 		}
 		return output;	
